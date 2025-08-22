@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atalhos de Conformidade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --card-bg: #fff;
+      --text-color: #333;
+      --btn-bg: #8B0000;
+      --btn-hover: #6e0000;
+      --title-color: #970c10;
+      --subtitle-color: #555555;
+    }
+
+    body.dark-mode {
+      --bg-color: #2c2c2c;
+      --card-bg: #2c2c2c;
+      --text-color: #f1f1f1;
+      --btn-bg: #3498db;
+      --btn-hover: #217dbb;
+      --title-color: #fff;
+      --subtitle-color: #ffffff;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--title-color);
+      margin-bottom: 10px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--subtitle-color);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    body.dark-mode .theme-toggle {
+      background: #444;
+      color: #fff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #fff;
+      padding: 8px;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .icon:hover {
+      transform: scale(1.15);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      color: var(--text-color);
+      margin: 5px 0;
+      font-weight: 600;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--btn-bg);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--btn-hover);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle">🌙</button>
+  <h1>Atalhos de Conformidade</h1>
+  <div class="subtitle">Feito Sob Medida para Equipe de Conformidade</div>
+  <div class="grid">
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/e1ff0a8c4d95538e3b6c24d81a28321120861962/Canva%20circular.jpg" alt="Canva" loading="lazy"></div><h2>Canva</h2><a href="https://www.canva.com" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/7a7b6a3edc07a508b210b9c63cbe1ad858a1cf3e/gmail%20redondo.png" alt="Gmail" loading="lazy"></div><h2>Gmail</h2><a href="https://mail.google.com" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/29e23c09d9058c07ffcf85337a61ddd8fabd4acd/WhatsApp.png" alt="WhatsApp" loading="lazy"></div><h2>WhatsApp</h2><a href="https://web.whatsapp.com" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/29e23c09d9058c07ffcf85337a61ddd8fabd4acd/Trello.png" alt="Trello" loading="lazy"></div><h2>Trello</h2><a href="https://trello.com" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/29e23c09d9058c07ffcf85337a61ddd8fabd4acd/Gest%C3%A3o%20de%20Conformidade.png" alt="Gestão de Conformidade" loading="lazy"></div><h2>Gestão de Conformidade</h2><a href="https://sites.google.com/ricardoalmeida.com.br/gestao-de-conformidade/p%C3%A1gina-inicial" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/29e23c09d9058c07ffcf85337a61ddd8fabd4acd/Webdox.jpeg" alt="Webdox" loading="lazy"></div><h2>Webdox</h2><a href="https://app.webdoxclm.com" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/29e23c09d9058c07ffcf85337a61ddd8fabd4acd/Zapier.png" alt="Zapier" loading="lazy"></div><h2>Zapier</h2><a href="https://zapier.com/" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/29e23c09d9058c07ffcf85337a61ddd8fabd4acd/Sheets.png" alt="Sheets" loading="lazy"></div><h2>Google Sheets</h2><a href="https://docs.google.com/spreadsheets" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/29e23c09d9058c07ffcf85337a61ddd8fabd4acd/Looker%20Studio.png" alt="Looker Studio" loading="lazy"></div><h2>Looker Studio</h2><a href="https://lookerstudio.google.com" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/29e23c09d9058c07ffcf85337a61ddd8fabd4acd/GPT.png" alt="ChatGPT" loading="lazy"></div><h2>ChatGPT</h2><a href="https://chat.openai.com/" class="btn" target="_blank" rel="noopener">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/29e23c09d9058c07ffcf85337a61ddd8fabd4acd/Google%20Drive.png" alt="Drive" loading="lazy"></div><h2>Google Drive</h2><a href="https://drive.google.com" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/a126ee0f8c6094f95ddee94db9b76e006d67daf0/Sorteador%20de%20Brindes.png" alt="Sorteador de Brindes" loading="lazy"></div><h2>Sorteador de Brindes</h2><a href="https://conformidadera.github.io/Sorteador-de-Brindes/" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/29e23c09d9058c07ffcf85337a61ddd8fabd4acd/Sorteador.png" alt="Sorteador de Processos" loading="lazy"></div><h2>Sorteador de Processos</h2><a href="https://conformidadera.github.io/Sorteador-de-Processos/" class="btn">Acessar</a></div>
+    <div class="card"><div class="icon"><img src="https://raw.githubusercontent.com/conformidadera/Tela-inicial-Conformidade/a126ee0f8c6094f95ddee94db9b76e006d67daf0/appsheet.png" alt="AppSheet" loading="lazy"></div><h2>AppSheet</h2><a href="https://www.appsheet.com/" class="btn">Acessar</a></div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
